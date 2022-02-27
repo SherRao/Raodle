@@ -10,62 +10,100 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess the word in 6 tries. After each guess, the color of the tiles will
-        change to show how close your guess was to the word.
+        The word is 'NAUSH'.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="W"
+          value="N"
           status="correct"
         />
-        <Cell value="E" />
-        <Cell value="A" />
-        <Cell value="R" />
-        <Cell value="Y" />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="A"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="U"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="S"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="H"
+          status="correct"
+        />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter W is in the word and in the correct spot.
+        All the letters are in the word and in the correct spots.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="H"
+          status="present"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="S"
+          status="present"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="U"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="A"
+          status="present"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="N"
+          status="present"
+        />
+      </div>
+      <p className="text-sm text-gray-500 dark:text-gray-300">
+        The letter U is in the right place, and all the others are in the word but the wrong place.
+      </p>
+
+      <div className="flex justify-center mb-1 mt-4">
+        <Cell value="P"/>
+        <Cell value="E" />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="N"
+          status="present"
+        />
         <Cell value="I" />
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="L"
+          value="S"
           status="present"
         />
-        <Cell value="O" />
-        <Cell value="T" />
-      </div>
+        </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter L is in the word but in the wrong spot.
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
-        <Cell value="G" />
-        <Cell isRevealing={true} isCompleted={true} value="U" status="absent" />
-        <Cell value="E" />
-      </div>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter U is not in the word in any spot.
-      </p>
-
-      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
-        This is an open source version of the word guessing game we all know and
-        love -{' '}
-        <a
-          href="https://github.com/cwackerfuss/react-wordle"
-          className="underline font-bold"
-        >
-          check out the code here
-        </a>{' '}
+        N and S are in the word but in the wrong place. The rest of the letters are not in the word.
       </p>
     </BaseModal>
   )
